@@ -1,9 +1,5 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
-:root {
-  background-color: var(--bg-color);
-}
-
 .page {
   min-inline-size: 0;
   font-family: var(--font-family);
@@ -322,7 +318,7 @@
   }
 
   .gallery__image_street {
-    aspect-ratio: 649 / 428;
+    aspect-ratio: 3 / 2;
   }
 
   .gallery__image_sunset {
@@ -346,6 +342,19 @@
   }
 }
 
+/* На планшетах текстовая колонка занимает две трети свободного места. */
+@media (768px <= width < 1024px) {
+  .content__section_reasons,
+  .content__section_advice {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+
+  .content__section_reasons > .content__cards,
+  .content__section_advice > .content__cards {
+    grid-column: 2;
+  }
+}
+
 /* Десктоп */
 
 @media (width >= 1024px) {
@@ -361,5 +370,10 @@
 
   .content__section_factors .content__cards {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .gallery__image_street {
+    aspect-ratio: 649 / 428;
+    margin-block-start: 5px;
   }
 }
