@@ -214,3 +214,107 @@
   line-height: 0.825;
   text-shadow: 2px 2px 0 var(--accent-color);
 }
+
+
+/* Адаптация под узкие экраны */
+
+@media (width < 375px) {
+  .header__title,
+  .footer__title {
+    font-size: min(7.25rem, calc((100vw - 20px) / 3));
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Планшеты */
+
+@media (width >= 768px) {
+  .header__title,
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__title {
+    margin-inline-start: calc(-1 * var(--page-padding));
+  }
+
+  .header__description {
+    justify-self: end;
+    width: 50%;
+  }
+
+  .content {
+    gap: 80px;
+    padding-block: 60px;
+  }
+
+  .content__section_reasons,
+  .content__section_advice {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+  }
+
+  .content__section_reasons > .content__cards,
+  .content__section_advice > .content__cards {
+    grid-column: span 2;
+  }
+
+  .content__section_factors > .content__section-title {
+    max-width: calc((100% - 40px) / 3);
+  }
+
+  .gallery,
+  .gallery__images {
+    gap: 20px;
+  }
+
+  .gallery__images {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas:
+      'sunset sunset ice-cream'
+      'tape books ice-cream'
+      'tape street street';
+  }
+
+  .gallery__image {
+    height: 100%;
+    min-height: 0;
+  }
+
+  .gallery__image_sunset {
+    grid-area: sunset;
+  }
+
+  .gallery__image_ice-cream {
+    grid-area: ice-cream;
+  }
+
+  .gallery__image_tape {
+    grid-area: tape;
+  }
+
+  .gallery__image_books {
+    grid-area: books;
+  }
+
+  .gallery__image_street {
+    grid-area: street;
+  }
+}
+
+/* Десктоп */
+
+@media (width >= 1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .content__section_factors .content__cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
