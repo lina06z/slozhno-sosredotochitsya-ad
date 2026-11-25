@@ -312,18 +312,16 @@
 
   .gallery__image_sunset {
     aspect-ratio: 2.5;
+    grid-area: sunset;
   }
 
   .gallery__image_books {
     aspect-ratio: 1;
+    grid-area: books;
   }
 
   .gallery__image_street {
     aspect-ratio: 3 / 2;
-  }
-
-  .gallery__image_sunset {
-    grid-area: sunset;
   }
 
   .gallery__image_ice-cream {
@@ -332,10 +330,6 @@
 
   .gallery__image_tape {
     grid-area: tape;
-  }
-
-  .gallery__image_books {
-    grid-area: books;
   }
 
   .gallery__image_street {
