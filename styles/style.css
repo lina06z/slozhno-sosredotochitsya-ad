@@ -175,3 +175,42 @@
 .content__link:focus-visible {
   outline: 1px solid currentColor;
 }
+
+/* Галерея */
+
+.gallery {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+
+.gallery__images {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+
+.gallery__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Подвал */
+
+.footer {
+  display: grid;
+  place-items: center;
+  min-height: 668px;
+  height: 100vh;
+  padding: var(--page-padding);
+}
+
+.footer__title {
+  color: var(--title-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: bold;
+  line-height: 0.825;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
