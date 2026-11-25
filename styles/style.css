@@ -107,3 +107,71 @@
   font-weight: bold;
   line-height: 23.4px;
 }
+
+/* Основной контент */
+
+.content {
+  display: grid;
+  gap: 50px;
+  padding: 40px var(--page-padding);
+}
+
+.content__section {
+  display: grid;
+  gap: 20px;
+  min-width: 0;
+}
+
+.content__section-title {
+  color: var(--section-title-color);
+  font-size: var(--font-size);
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.content__cards {
+  display: grid;
+  align-content: start;
+  gap: 20px;
+  min-width: 0;
+}
+
+.content__card {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-width: 0;
+}
+
+.content__card-title {
+  font-size: var(--font-size);
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.content__card-title_regular {
+  font-weight: normal;
+}
+
+.content__text {
+  line-height: 1.3;
+  overflow-wrap: break-word;
+}
+
+.content__link {
+  color: inherit;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.content__link:hover {
+  border-bottom: 1px solid currentColor;
+}
+
+.content__link:focus {
+  outline: none;
+}
+
+.content__link:focus-visible {
+  outline: 1px solid currentColor;
+}
