@@ -4,11 +4,13 @@
 */
 
 :root {
+  color-scheme: dark;
   --font-family: 'IBM Plex mono', monospace;
   --font-size: 18px;
   --bg-color: #000028;
   --bg-image: url('../images/cover-image-dark.png');
   --accent-color: #ff0070;
+  --title-shadow-color: #ff0070;
   --title-color: #db00ff;
   --text-color: #f1b2ce;
   --decor-text-color: #000028;
